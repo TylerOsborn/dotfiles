@@ -7,9 +7,8 @@ local map = vim.keymap.set
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
 map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
-map("i", "pp", "<CMD> p <CR>")
 
--- TODO: figure out how to only ave these mappings in go files
+-- TODO: figure out how to only have these mappings in go files
 -- Go Dap Mappings
 map("n", "<leader>db", "<CMD> DapToggleBreakpoint <CR>", {desc = "Add break point at line"})
 map("n", "<leader>dus", function ()
