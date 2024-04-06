@@ -1,11 +1,4 @@
 return {
-  -- {
-  --   "stevearc/conform.nvim",
-  --   event = "BufWritePre", -- uncomment for format on save
-  --   config = function()
-  --     require "configs.conform"
-  --   end,
-  -- },
   {
     "rcarriga/nvim-dap-ui",
     dependencies = { "mfussenegger/nvim-dap" },
@@ -26,10 +19,8 @@ return {
   },
   {
     "mfussenegger/nvim-dap",
-    config = function()
-    end,
-    init = function ()
-      -- require("core.util").load_mappings("dap")
+    config = function() end,
+    init = function()
     end,
   },
   {
@@ -38,7 +29,6 @@ return {
     dependencies = { "mfussenegger/nvim-dap" },
     config = function(_, opts)
       require("dap-go").setup(opts)
-      --      require("core.util").load_mappings("dap_go")
     end,
   },
   {
@@ -98,7 +88,6 @@ return {
     ft = "go",
     config = function(_, opts)
       require("gopher").setup(opts)
-      --      require("core.util").load_mappings("gopher")
     end,
     build = function()
       vim.cmd [[silent! GoInstallDeps]]
