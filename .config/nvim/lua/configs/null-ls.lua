@@ -6,6 +6,7 @@ local opts = {
     null_ls.builtins.formatting.gofumpt,
     null_ls.builtins.formatting.goimports_reviser,
     null_ls.builtins.formatting.golines,
+    -- python
     null_ls.builtins.diagnostics.mypy,
     null_ls.builtins.diagnostics.ruff,
     null_ls.builtins.formatting.black,
@@ -23,6 +24,7 @@ local opts = {
           vim.lsp.buf.format { bufnr = bufnr }
         end,
       })
+      -- vim.api.nvim_create_autocmd("FileType", {})
     end
   end,
 }

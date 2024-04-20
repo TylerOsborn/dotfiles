@@ -23,8 +23,7 @@ return {
   {
     "mfussenegger/nvim-dap",
     config = function() end,
-    init = function()
-    end,
+    init = function() end,
   },
   {
     "dreamsofcode-io/nvim-dap-go",
@@ -54,6 +53,10 @@ return {
     end,
   },
   {
+    "nvim-telescope/telescope-fzf-native.nvim",
+    build = "make"
+  },
+  {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
@@ -80,7 +83,7 @@ return {
       -- go
       "go",
       --python
-      "python",
+      -- "python",
     },
     opts = function()
       return require "configs.null-ls"
@@ -98,6 +101,9 @@ return {
   },
   {
     "nvim-treesitter/nvim-treesitter",
+    -- dependencies = {
+    --   "neovim/nvim-lspconfig"
+    -- },
     opts = {
       ensure_installed = {
         "vim",
