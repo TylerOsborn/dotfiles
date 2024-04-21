@@ -14,6 +14,13 @@ return {
     end,
   },
   {
+    "nvimtools/none-ls.nvim",
+    ft = "go",
+    opts = function ()
+      return require("configs.none-ls")
+    end
+  },
+  {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
@@ -39,4 +46,19 @@ return {
       },
     },
   },
+  -- go plugins
+  {
+    "mfussenegger/nvim-dap",
+    ft = "go"
+  },
+  {
+    "dreamsofcode-io/nvim-dap-go",
+    ft = "go",
+    dependencies = {
+      "mfussenegger/nvim-dap",
+    },
+    config = function (_, opts)
+      require("dap-go").setup(opts)
+    end
+  }
 }
