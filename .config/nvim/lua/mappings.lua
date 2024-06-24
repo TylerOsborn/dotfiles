@@ -26,3 +26,10 @@ end, {desc = "Debug go test"})
 map("n", "<leader>dgl", function ()
   require("dap-go").debug_last()
 end, {desc = "Debug last run go test"})
+
+-- copilot mappings
+vim.keymap.set('i', '<C-J>', 'copilot#Accept("\\<CR>")', {
+  expr = true,
+  replace_keycodes = false
+})
+vim.g.copilot_no_tab_map = true

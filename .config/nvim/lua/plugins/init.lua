@@ -31,6 +31,8 @@ return {
         "prettier",
         -- go
         "gopls",
+        -- vue
+        "vue-language-server"
       },
     },
   },
@@ -60,5 +62,10 @@ return {
     config = function (_, opts)
       require("dap-go").setup(opts)
     end
-  }
+  },
+  -- general plugins
+  {
+    "github/copilot.vim",
+    lazy=false
+  },
 }
