@@ -28,7 +28,7 @@ map("n", "<leader>dgl", function ()
 end, {desc = "Debug last run go test"})
 
 -- copilot mappings
-vim.keymap.set('i', '<C-J>', 'copilot#Accept("\\<CR>")', {
+vim.keymap.set('i', '<C-L>', 'copilot#Accept("\\<CR>")', {
   expr = true,
   replace_keycodes = false
 })
